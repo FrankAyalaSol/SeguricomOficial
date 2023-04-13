@@ -23,7 +23,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/app/components/e404/e404.component.css",
+              "src/app/components/principal/principal.component.css",
+              "src/app/components/iniciar-sesion/iniciar-sesion.component.css",
+              "src/app/components/crear-usuario/crear-usuario.component.css"
             ],
             "scripts": []
           },
@@ -97,5 +102,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "f953b96c-57f3-4c53-b0e9-082f8679241e"
   }
 }
