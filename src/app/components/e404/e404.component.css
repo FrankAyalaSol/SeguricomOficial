@@ -1,8 +1,8 @@
 .imagen_fondo{
-  max-width: 1920px;
-   max-height: 1080;
-   height: auto;
-   width: auto;
+   position: absolute;
+   height: 1041px;
+   width: 2048px;
+   max-width: 100%;
 }
 .conten {
   position: fixed;

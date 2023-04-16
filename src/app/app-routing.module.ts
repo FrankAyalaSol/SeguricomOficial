@@ -6,11 +6,16 @@ import { IniciarSesionComponent } from './components/iniciar-sesion/iniciar-sesi
 import { PrincipalComponent } from './components/principal/principal.component';
 import { CrearUsuarioComponent } from './components/crear-usuario/crear-usuario.component';
 import { E404Component } from './components/e404/e404.component';
+import { ContactoComponent } from './components/contacto/contacto.component';
+import { PreciosComponent } from './components/precios/precios.component';
+import { ServiciosComponent } from './components/servicios/servicios.component';
+import { SobreNosotrosComponent } from './components/sobre-nosotros/sobre-nosotros.component';
+import { PaginaPrincipalComponent } from './components/pagina-principal/pagina-principal.component';
 
 const routes: Routes = [
   {
     path: '',
-     component:PrincipalComponent
+    component:PaginaPrincipalComponent
   },
   {
     path: 'Iniciar_Sesion',
@@ -23,6 +28,26 @@ const routes: Routes = [
   {
     path: 'ERROR404',
     component:E404Component
+  },
+  {
+    path: 'Contacto',
+    component:ContactoComponent
+  },
+  {
+    path: 'Precios',
+    component:PreciosComponent
+  },
+  {
+    path: 'Servicios',
+    component:ServiciosComponent
+  },
+  {
+    path: 'Sobre_Nosotros',
+    component:SobreNosotrosComponent
+  },
+  {
+    path: 'principal',
+    component:PrincipalComponent
   },
   {
     path: '**',

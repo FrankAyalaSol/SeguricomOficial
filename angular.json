@@ -24,13 +24,10 @@
             ],
             "styles": [
               "src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "src/app/components/e404/e404.component.css",
-              "src/app/components/principal/principal.component.css",
-              "src/app/components/iniciar-sesion/iniciar-sesion.component.css",
-              "src/app/components/crear-usuario/crear-usuario.component.css"
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": []
+            "scripts": [
+            ]
           },
           "configurations": {
             "production": {

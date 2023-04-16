@@ -9,6 +9,11 @@ import { IniciarSesionComponent } from './components/iniciar-sesion/iniciar-sesi
 import { CrearUsuarioComponent } from './components/crear-usuario/crear-usuario.component';
 import { E404Component } from './components/e404/e404.component';
 import { PrincipalComponent } from './components/principal/principal.component';
+import { ServiciosComponent } from './components/servicios/servicios.component';
+import { PreciosComponent } from './components/precios/precios.component';
+import { SobreNosotrosComponent } from './components/sobre-nosotros/sobre-nosotros.component';
+import { ContactoComponent } from './components/contacto/contacto.component';
+import { PaginaPrincipalComponent } from './components/pagina-principal/pagina-principal.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +21,12 @@ import { PrincipalComponent } from './components/principal/principal.component';
     IniciarSesionComponent,
     CrearUsuarioComponent,
     E404Component,
-    PrincipalComponent
+    PrincipalComponent,
+    ServiciosComponent,
+    PreciosComponent,
+    SobreNosotrosComponent,
+    ContactoComponent,
+    PaginaPrincipalComponent
   ],
   imports: [
     BrowserModule,
