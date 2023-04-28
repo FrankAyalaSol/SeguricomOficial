@@ -162,9 +162,12 @@ header{
   .navbar a:hover{
     color:#f92310;
   }
+  .a5{
+    color:#ffffff;
+    font-size: 10px;
+    margin-right: 7px;
+  }
 }
-
-
 
 .encabezado{
   background: #000000;

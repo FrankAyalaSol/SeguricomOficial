@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FormsModule } from '@angular/forms';
 
 //Componentes del Proyecto Seguricom
 import { IniciarSesionComponent } from './components/iniciar-sesion/iniciar-sesion.component';
@@ -14,6 +15,7 @@ import { PreciosComponent } from './components/precios/precios.component';
 import { SobreNosotrosComponent } from './components/sobre-nosotros/sobre-nosotros.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { PaginaPrincipalComponent } from './components/pagina-principal/pagina-principal.component';
+import { PaginaClienteComponent } from './components/pagina-cliente/pagina-cliente.component';
 
 @NgModule({
   declarations: [
@@ -26,11 +28,13 @@ import { PaginaPrincipalComponent } from './components/pagina-principal/pagina-p
     PreciosComponent,
     SobreNosotrosComponent,
     ContactoComponent,
-    PaginaPrincipalComponent
+    PaginaPrincipalComponent,
+    PaginaClienteComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

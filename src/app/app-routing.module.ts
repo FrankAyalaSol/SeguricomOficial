@@ -11,6 +11,7 @@ import { PreciosComponent } from './components/precios/precios.component';
 import { ServiciosComponent } from './components/servicios/servicios.component';
 import { SobreNosotrosComponent } from './components/sobre-nosotros/sobre-nosotros.component';
 import { PaginaPrincipalComponent } from './components/pagina-principal/pagina-principal.component';
+import { PaginaClienteComponent } from './components/pagina-cliente/pagina-cliente.component';
 
 const routes: Routes = [
   {
@@ -18,12 +19,16 @@ const routes: Routes = [
     component:PaginaPrincipalComponent
   },
   {
-    path: 'Iniciar_Sesion',
+    path: 'Iniciar_Sesion', //sign-in
      component:IniciarSesionComponent
   },
   {
-    path: 'Crear_Usuario',
+    path: 'Crear_Usuario',//sign-up
     component:CrearUsuarioComponent
+  },
+  {
+    path: 'Pagina_Cliente', //private
+     component:PaginaClienteComponent
   },
   {
     path: 'ERROR404',

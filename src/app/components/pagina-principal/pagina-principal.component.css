@@ -1,0 +1,14 @@
+.imagen-encabezado{
+  width: 1920px;
+  height: 700px;
+  max-width: 100%;
+  background-size:cover;
+}
+.contenedor .imagen-encabezado .Cuadrado
+{
+margin-left: 650px;
+padding: 30px;
+width:500px;
+height: 400px;
+background-color:#ffffff;
+}
