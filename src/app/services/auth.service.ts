@@ -12,15 +12,15 @@ export class AuthService {
   constructor(private http: HttpClient, private router: Router) { }
 
   signUpUser(user: any) {
-    return this.http.post<any>(this.URL + '/crear-usuario', user);
+    return this.http.post<any>(this.URL + '/Crear-Usuario', user);
   }
 
   signInUser(user: any) {
-    return this.http.post<any>(this.URL + '/iniciar-sesion', user);
+    return this.http.post<any>(this.URL + '/Iniciar-Sesion', user);
   }
 
   loggedIn() {
-    return !!localStorage.getItem('token'); // Retorna "true" o "false" si el token existe o no 
+    return !!localStorage.getItem('token'); // Retorna "true" o "false" si el token existe o no
   }
 
   getToken() {
@@ -29,7 +29,7 @@ export class AuthService {
 
   logout() {
     localStorage.removeItem('token');
-    this.router.navigate(['/iniciar-sesion']);
+    this.router.navigate(['/']);
   }
 
 }

@@ -1,1 +1,16 @@
 <p>pagina-cliente works!</p>
+<ul class="navbar-nav ml-auto">
+  <ng-container *ngIf="!authService.loggedIn(); else loggedIn">
+      <li class="nav-item">
+          <a class="nav-link" routerLink="/login" routerLinkActive="active">Login</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" routerLink="/register" routerLinkActive="active">Register</a>
+      </li>
+  </ng-container>
+  <ng-template #loggedIn>
+      <li class="nav-item">
+          <a class="nav-link" (click)="authService.logout()">Logout</a>
+      </li>
+  </ng-template>
+</ul>

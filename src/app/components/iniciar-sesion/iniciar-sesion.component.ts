@@ -24,7 +24,7 @@ export class IniciarSesionComponent implements OnInit {
         res => {
           console.log(res)
           localStorage.setItem('token', res.token);
-          //this.router.navigate(['/pagina-cliente']);
+          this.router.navigate(['/Pagina_Cliente']);
         },
         err => console.log(err)
       )

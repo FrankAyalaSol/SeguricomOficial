@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+import { AuthGuard } from './auth.guard';
+
 //Componentes
 import { IniciarSesionComponent } from './components/iniciar-sesion/iniciar-sesion.component';
 import { PrincipalComponent } from './components/principal/principal.component';
@@ -28,7 +30,8 @@ const routes: Routes = [
   },
   {
     path: 'Pagina_Cliente', //private
-     component:PaginaClienteComponent
+     component:PaginaClienteComponent,
+     canActivate: [AuthGuard]
   },
   {
     path: 'ERROR404',
