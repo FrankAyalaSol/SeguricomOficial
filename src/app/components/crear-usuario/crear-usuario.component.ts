@@ -18,10 +18,14 @@ export class CrearUsuarioComponent implements OnInit {
     birth_date: '',
     password: ''
   }
+  tipo_cliente = [
+    {tipo: "Persona"},
+    {tipo: "Empresa"}
+  ]
   constructor(private authService: AuthService, private router: Router) {}
 
   ngOnInit() {
-    
+
   }
 
   signUp() {
@@ -32,7 +36,7 @@ export class CrearUsuarioComponent implements OnInit {
         res => {
           console.log(res);
           localStorage.setItem('token', res.token);
-          // this.router.navigate(['/private']);
+          this.router.navigate(['/Iniciar_Sesion']);
         },
         err => console.log(err)
       )
