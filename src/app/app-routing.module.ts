@@ -14,6 +14,7 @@ import { ServiciosComponent } from './components/servicios/servicios.component';
 import { SobreNosotrosComponent } from './components/sobre-nosotros/sobre-nosotros.component';
 import { PaginaPrincipalComponent } from './components/pagina-principal/pagina-principal.component';
 import { PaginaClienteComponent } from './components/pagina-cliente/pagina-cliente.component';
+import { SolicitarCitaComponent } from './components/solicitar-cita/solicitar-cita.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,11 @@ const routes: Routes = [
   {
     path: 'Pagina_Cliente', //private
      component:PaginaClienteComponent,
+     canActivate: [AuthGuard]
+  },
+  {
+    path: 'Solicitar_Cita', //private
+     component:SolicitarCitaComponent,
      canActivate: [AuthGuard]
   },
   {

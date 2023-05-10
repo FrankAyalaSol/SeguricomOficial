@@ -20,6 +20,7 @@ import { SobreNosotrosComponent } from './components/sobre-nosotros/sobre-nosotr
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { PaginaPrincipalComponent } from './components/pagina-principal/pagina-principal.component';
 import { PaginaClienteComponent } from './components/pagina-cliente/pagina-cliente.component';
+import { SolicitarCitaComponent } from './components/solicitar-cita/solicitar-cita.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { PaginaClienteComponent } from './components/pagina-cliente/pagina-clien
     SobreNosotrosComponent,
     ContactoComponent,
     PaginaPrincipalComponent,
-    PaginaClienteComponent
+    PaginaClienteComponent,
+    SolicitarCitaComponent
   ],
   imports: [
     BrowserModule,
