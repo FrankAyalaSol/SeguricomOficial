@@ -4,7 +4,7 @@
             <div class="card">
                 <div class="card-body text-center">
                     <span >SOLICITAR CITA</span>
-                    <form class="mt-3" [formGroup]="citaForm" (ngSubmit)="agregarCita()">
+                    <form class="mt-3" [formGroup]="citaForm" (submit)="crearCita()">
                         <div class="mb-3">
                             <input type="text" formControlName="nombre"
                                 class="form-control form-control-lg" placeholder="Nombres y Apellidos">
@@ -42,7 +42,7 @@
                         </div>
                         <div class="mb-3">
                             <button routerLink="/Pagina_Cliente" class="btn btn-secondary btn-lg float-start">VOLVER</button>
-                            <button type="submit" [disabled]="citaForm.invalid" class="btn btn-secondary btn-lg float-end">ACEPTAR</button>
+                            <button type="submit" class="btn btn-secondary btn-lg float-end">ACEPTAR</button>
                         </div>
                     </form>
                 </div>

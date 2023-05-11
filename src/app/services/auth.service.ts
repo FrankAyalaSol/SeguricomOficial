@@ -22,6 +22,9 @@ export class AuthService {
   loggedIn() {
     return !!localStorage.getItem('token'); // Retorna "true" o "false" si el token existe o no
   }
+  createCita(user: any){
+    return this.http.post<any>(this.URL + '/Solicitar_Cita', user);
+  }
 
   getToken() {
     return localStorage.getItem('token');
