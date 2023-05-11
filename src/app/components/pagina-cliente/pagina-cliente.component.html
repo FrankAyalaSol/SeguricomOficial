@@ -11,7 +11,6 @@
   <ng-template #loggedIn>
       <li class="nav-item">
           <a class="nav-link" (click)="authService.logout()">Logout</a>
-      </li>
-      <a href="/Solicitar_Cita" class="Referencia1"> <div class="Cuadrado2">¡Solicitar Cita!</div> </a>
+          <button class="btn btn-success" routerLink="/Solicitar_Cita">SOLICITAR CITA</button>
   </ng-template>
 </ul>
