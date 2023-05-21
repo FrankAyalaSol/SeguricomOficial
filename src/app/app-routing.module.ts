@@ -15,6 +15,9 @@ import { SobreNosotrosComponent } from './components/sobre-nosotros/sobre-nosotr
 import { PaginaPrincipalComponent } from './components/pagina-principal/pagina-principal.component';
 import { PaginaClienteComponent } from './components/pagina-cliente/pagina-cliente.component';
 import { SolicitarCitaComponent } from './components/solicitar-cita/solicitar-cita.component';
+import { PaginaEspecialistaComponent } from './components/pagina-especialista/pagina-especialista.component';
+import { PaginaGerenteComponent } from './components/pagina-gerente/pagina-gerente.component';
+import { PaginaAdministradorComponent } from './components/pagina-administrador/pagina-administrador.component';
 
 const routes: Routes = [
   {
@@ -33,6 +36,21 @@ const routes: Routes = [
     path: 'Pagina_Cliente', //private
      component:PaginaClienteComponent,
      canActivate: [AuthGuard]
+  },
+  {
+    path: 'Pagina_Especialista', //private
+    component:PaginaEspecialistaComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'Pagina_Gerente', //private
+    component:PaginaGerenteComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'Pagina_Administrador', //private
+    component:PaginaAdministradorComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'Solicitar_Cita', //private

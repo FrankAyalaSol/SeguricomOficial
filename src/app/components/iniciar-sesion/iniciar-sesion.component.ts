@@ -24,9 +24,17 @@ export class IniciarSesionComponent implements OnInit {
         res => {
           console.log(res)
           localStorage.setItem('token', res.token);
-          this.router.navigate(['/Pagina_Cliente']);
-        },
-        err => console.log(err)
-      )
+          localStorage.setItem('rol', res.rol);
+          if(res.rol == "1") {
+            this.router.navigate(['/Pagina_Administrador']);
+          } else if (res.rol == "2"){
+            this.router.navigate(['/Pagina_Gerente']);
+          } else if (res.rol == "3"){
+            this.router.navigate(['/Pagina_Especialista']);
+          } else if (res.rol == "4"){
+            this.router.navigate(['/Pagina_Cliente']);
+          }
+        });
+
   }
 }
