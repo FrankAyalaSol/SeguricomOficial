@@ -7,12 +7,11 @@
   list-style: none;
 }
 :root{
-  --bg-color: #222327;
   --text-color: #000000;
-  --main-color: #f92310;
+  --main-color: #CE0A71;
   --block-color: #083472;
 }
-header{
+head{
   position:fixed;
   width: 100%;
   top: 0;
@@ -45,11 +44,12 @@ header{
   transition: all .50 ease;
 }
 .navbar a:hover{
-  color:#f92310;
+  color: #CE0A71;
 }
 .main{
   display: flex;
   align-items:center;
+  gap: 30px;
 }
 .main a{
   margin-right: 25px;
@@ -66,19 +66,17 @@ header{
   align-items: center;
 }
 .user i{
-  color:#f92310;
+  color:#CE0A71;
   font-size: 28px;
   margin-right: 7px;
 }
-.main a:hover{
-  color:#f92310;
-}
+
 .user-reg{
   display:flex;
   align-items: center;
 }
 .user-reg i{
-  color:#f92310;
+  color:#CE0A71;
   font-size: 28px;
   margin-right: 7px;
 }
@@ -87,7 +85,7 @@ header{
   align-items: center;
 }
 .a1 i{
-  color:#f92310;
+  color:#CE0A71;
   font-size: 28px;
   margin-right: 7px;
 }
@@ -96,7 +94,7 @@ header{
   align-items: center;
 }
 .a2 i{
-  color:#f92310;
+  color:#CE0A71;
   font-size: 28px;
   margin-right: 7px;
 }
@@ -105,7 +103,7 @@ header{
   align-items: center;
 }
 .a3 i{
-  color:#f92310;
+  color:#CE0A71;
   font-size: 28px;
   margin-right: 7px;
 }
@@ -114,7 +112,7 @@ header{
   align-items: center;
 }
 .a4 i{
-  color:#f92310;
+  color:#CE0A71;
   font-size: 28px;
   margin-right: 7px;
 }
@@ -155,18 +153,12 @@ header{
     display: flex;
     font-size: 20px;
   }
-  .navbar a:hover{
-    color:#000000;
-    transform: translateY(5px);
-  }
-  .navbar a:hover{
-    color:#f92310;
-  }
   .a5{
     color:#ffffff;
     font-size: 10px;
     margin-right: 7px;
   }
+  
 }
 
 .encabezado{
@@ -209,5 +201,40 @@ header{
   color:#ffffff;
 }
 .encabezado a:hover{
-  color:#f92310;
+  color:#CE0A71;
 }
+
+.iniciar-sesion-btn{
+  background-color: #CE0A71;
+  border-radius: 8px;
+  padding: 5px ;
+}
+
+.iniciar-sesion-btn a{
+  color: white;
+}
+
+.registrarse-btn{
+  background-color: #FFE7F3;
+  border-radius: 8px;
+  padding: 5px ;
+}
+
+.registrarse-btn a{
+  color: #CE0A71;
+}
+
+.horarios {
+  background-color: #CE0A71;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 123px;
+  position: relative;
+  margin-bottom: -123px;
+}
+
+.horarios p {
+  font-size: 14px;
+}
+
