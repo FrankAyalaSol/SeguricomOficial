@@ -21,6 +21,7 @@ import { ContactoComponent } from './components/contacto/contacto.component';
 import { PaginaPrincipalComponent } from './components/pagina-principal/pagina-principal.component';
 import { PaginaClienteComponent } from './components/pagina-cliente/pagina-cliente.component';
 import { SolicitarCitaComponent } from './components/solicitar-cita/solicitar-cita.component';
+import { GenerarOrdenVisitaComponent } from './components/generar-orden-visita/generar-orden-visita.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { SolicitarCitaComponent } from './components/solicitar-cita/solicitar-ci
     ContactoComponent,
     PaginaPrincipalComponent,
     PaginaClienteComponent,
-    SolicitarCitaComponent
+    SolicitarCitaComponent,
+    GenerarOrdenVisitaComponent
   ],
   imports: [
     BrowserModule,

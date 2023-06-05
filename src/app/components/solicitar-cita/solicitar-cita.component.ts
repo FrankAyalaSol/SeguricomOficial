@@ -49,6 +49,4 @@ export class SolicitarCitaComponent implements OnInit {
         err => console.log(err)
       )
   }
-
-
 }

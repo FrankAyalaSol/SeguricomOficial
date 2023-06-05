@@ -9,8 +9,13 @@
       </li>
   </ng-container>
   <ng-template #loggedIn>
+    <div class="mb-3">
       <li class="nav-item">
           <a class="nav-link" (click)="authService.logout()">Logout</a>
-          <button class="btn btn-success" routerLink="/Solicitar_Cita">SOLICITAR CITA</button>
+          <button class="btn btn-success btn-lg" routerLink="/Solicitar_Cita">SOLICITAR CITA</button>
+    </div>
+    <div class="mb-3">
+          <button class="btn btn-success btn-lg" routerLink="/Generar_Orden_Visita">GENERAR ORDEN DE VISITA</button>
+    </div>
   </ng-template>
 </ul>
