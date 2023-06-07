@@ -5,11 +5,11 @@
   font-family: 'Kanit', sans-serif;
   text-decoration: none;
   list-style: none;
+  position: sticky;
 }
 :root{
   --text-color: #000000;
   --main-color: #CE0A71;
-  --block-color: #083472;
 }
 head{
   position:fixed;
@@ -231,7 +231,7 @@ head{
   padding: 10px 0;
   margin-top: 123px;
   position: relative;
-  margin-bottom: -123px;
+  margin-bottom: -100px;
 }
 
 .horarios p {

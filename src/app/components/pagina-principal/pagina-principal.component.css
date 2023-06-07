@@ -172,18 +172,9 @@
 
 /*Testimonials*/
 
-.testimonial-slider {
-  position: relative;
-  max-width: 100%; /* Adjust the width as needed */
-  margin: 0 auto;
-  overflow: hidden;
-  height: 465px;
-}
-
 .slides {
   display: flex;
   transition: transform 0.3s ease-in-out;
-  
 }
 
 .slide {
@@ -192,37 +183,96 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+  height: 300px;
 }
 
 .testimonial {
-  background-color: rgba(255, 255, 255, 0.7); /* Set the desired background color with transparency */
+  background-color: rgba(255, 255, 255, 0.9); /* Set the desired background color with transparency */
   padding: 20px;
   text-align: center;
-  height: 460px;
-  
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .testimonial-text {
   font-size: 18px;
   margin-bottom: 10px;
+  margin-right: 250px;
+  margin-left: 250px;
   color: #000000; /* Set the desired text color */
-  
+
 }
 
 .testimonial-author {
-  font-size: 14px;
-  font-style: italic;
+  font-size: 18px;
+  font-weight: bold;
   color: #000000; /* Set the desired text color */
 }
 
 .stars {
   display: flex;
   justify-content: center;
+  align-items: center; /* Center the stars vertically */
   margin-top: 10px;
 }
 
 .star {
-  color: gold;
-  font-size: 20px;
+  color: rgb(239, 210, 42);
+  font-size: 30px;
 }
 
+/* Newsletter */
+
+.newsletter {
+  padding: 28px;
+  color:#CE0A71;
+  text-align: center;
+}
+
+.newsletter-title {
+  font-size: 28px;
+  margin: 20px;
+  color: #CE0A71;
+  font-weight: bold;
+  text-align: center;
+}
+
+.newsletter-description {
+  font-size: 18px;
+  color: #64748B;
+  margin-bottom: 20px;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+}
+
+.newsletter-input {
+  padding: 8px;
+  border-radius: 4px;
+  background-color: #F1F5F9;
+  font-size: 16px;
+  width: 300px;
+  margin-right: 10px;
+  
+}
+
+.newsletter-button {
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: none;
+  background-color: #CE0A71;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Map Section */
+.map-title {
+  text-align: center;
+  font-size: 15px;
+  margin-top: 20px;
+}
