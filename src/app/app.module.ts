@@ -24,6 +24,9 @@ import { SolicitarCitaComponent } from './components/solicitar-cita/solicitar-ci
 import { PaginaEspecialistaComponent } from './components/pagina-especialista/pagina-especialista.component';
 import { PaginaGerenteComponent } from './components/pagina-gerente/pagina-gerente.component';
 import { PaginaAdministradorComponent } from './components/pagina-administrador/pagina-administrador.component';
+import { VisualizarEspecialistaComponent } from './components/visualizar-especialista/visualizar-especialista.component';
+import { AsignarEspecialistaComponent } from './components/asignar-especialista/asignar-especialista.component';
+import { AsignarEspecialistaClienteComponent } from './components/asignar-especialista-cliente/asignar-especialista-cliente.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +44,10 @@ import { PaginaAdministradorComponent } from './components/pagina-administrador/
     SolicitarCitaComponent,
     PaginaEspecialistaComponent,
     PaginaGerenteComponent,
-    PaginaAdministradorComponent
+    PaginaAdministradorComponent,
+    VisualizarEspecialistaComponent,
+    AsignarEspecialistaComponent,
+    AsignarEspecialistaClienteComponent
   ],
   imports: [
     BrowserModule,

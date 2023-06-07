@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AuthGuard } from './auth.guard';
@@ -18,6 +18,9 @@ import { SolicitarCitaComponent } from './components/solicitar-cita/solicitar-ci
 import { PaginaEspecialistaComponent } from './components/pagina-especialista/pagina-especialista.component';
 import { PaginaGerenteComponent } from './components/pagina-gerente/pagina-gerente.component';
 import { PaginaAdministradorComponent } from './components/pagina-administrador/pagina-administrador.component';
+import { VisualizarEspecialistaComponent } from './components/visualizar-especialista/visualizar-especialista.component';
+import { AsignarEspecialistaComponent } from './components/asignar-especialista/asignar-especialista.component';
+import { AsignarEspecialistaClienteComponent } from './components/asignar-especialista-cliente/asignar-especialista-cliente.component';
 
 const routes: Routes = [
   {
@@ -46,6 +49,18 @@ const routes: Routes = [
     path: 'Pagina_Gerente', //private
     component:PaginaGerenteComponent,
     canActivate: [AuthGuard]
+  },
+  {
+    path: 'Asignar_Especialista',
+    component:AsignarEspecialistaComponent,
+  },
+  {
+    path: 'Asignar_Especialista_Cliente',
+    component:AsignarEspecialistaClienteComponent,
+  },
+  {
+    path: 'Visualizar_Especialista',
+    component:VisualizarEspecialistaComponent,
   },
   {
     path: 'Pagina_Administrador', //private
@@ -86,7 +101,6 @@ const routes: Routes = [
     redirectTo: 'ERROR404',
     pathMatch:'full'
   }
-
 ];
 
 @NgModule({
