@@ -70,7 +70,7 @@ const routes: Routes = [
   {
     path: 'Solicitar_Cita', //private
      component:SolicitarCitaComponent,
-     canActivate: [AuthGuard]
+
   },
   {
     path: 'ERROR404',
