@@ -13,8 +13,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 export class SolicitarCitaComponent implements OnInit {
   isFieldsBlocked: boolean = false;
-  [x: string]: any;
-  visitaForm: FormGroup;
+  // [x: string]: any;
+  visitaForm!: FormGroup;
 
   visita={
     tipos: '',
@@ -32,31 +32,31 @@ export class SolicitarCitaComponent implements OnInit {
   ]
   public formParent: FormGroup = new FormGroup({});
 
-  constructor(private fb: FormBuilder,  private authService: AuthService) {this.visitaForm = this.fb.group({
-    tipos: ['', Validators.required],
-    pregunta1: ['', Validators.required],
-    pregunta2: ['', Validators.required],
-    pregunta3: ['', Validators.required],
-    pregunta4: ['', Validators.required],
-    pregunta5: ['', Validators.required],
-    pregunta6: ['', Validators.required],
-  })
- }
+  constructor(private fb: FormBuilder) {}
 
   ngOnInit(): void {
-    this.initFormParent()
-
+    //this.initFormParent()
+    this.visitaForm = this.fb.group({
+      tipos: ['', Validators.required],
+      pregunta1: ['', Validators.required],
+      pregunta2: ['', Validators.required],
+      pregunta3: ['', Validators.required],
+      pregunta4: ['', Validators.required],
+      pregunta5: ['', Validators.required],
+      pregunta6: ['', Validators.required],
+    })
   }
+
   agregarVisita(){
 
     console.log(this.visita);
 
   }
 
-  initFormParent():void{
-    this.formParent = new FormGroup({
+  // initFormParent():void{
+  //   this.formParent = new FormGroup({
 
-    })
-  }
+  //   })
+  // }
 
 }

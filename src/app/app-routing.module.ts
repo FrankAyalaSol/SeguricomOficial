@@ -69,7 +69,7 @@ const routes: Routes = [
   },
   {
     path: 'Solicitar_Cita', //private
-     component:SolicitarCitaComponent,
+     component:SolicitarCitaComponent
 
   },
   {
