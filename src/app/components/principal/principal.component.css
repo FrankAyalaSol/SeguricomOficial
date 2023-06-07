@@ -22,6 +22,7 @@ head{
   background: transparent;
   padding: 44px 12%;
   transition: all .50s ease;
+  z-index: 9;
 }
 .Imagen{
   display:flex;
@@ -172,6 +173,7 @@ head{
   align-items: center;
   justify-content: space-between;
   transition: all .50s ease;
+  
 }
 
 .navbar2{
