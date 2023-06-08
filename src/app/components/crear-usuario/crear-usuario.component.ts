@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
+import { Usuario } from 'src/app/models/usuario.model';
 
 @Component({
   selector: 'app-crear-usuario',
@@ -8,16 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./crear-usuario.component.css']
 })
 export class CrearUsuarioComponent implements OnInit {
-  user = {
-    firstname: '',
-    lastname: '',
-    email: '',
-    phone: '',
-    client_type: '',
-    document_number: '',
-    birth_date: '',
-    password: ''
-  }
+  user = <Usuario>{};
   tipo_cliente = [
     {tipo: "Persona"},
     {tipo: "Empresa"}
