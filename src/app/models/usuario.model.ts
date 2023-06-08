@@ -8,6 +8,7 @@ export class Usuario{
     dni: number;
     fecha_nacimiento: string;
     password: string;
+    rol: number;
 
   constructor(
     nombre: string,
@@ -17,8 +18,8 @@ export class Usuario{
     tipo_cliente: string,
     dni: number,
     fecha_nacimiento: string,
-    password: string
-
+    password: string,
+    rol: number
   ){
     this.nombre = nombre;
     this.apellido = apellido;
@@ -28,6 +29,7 @@ export class Usuario{
     this.dni = dni;
     this.fecha_nacimiento = fecha_nacimiento;
     this.password = password;
+    this.rol=rol;
   }
 
 }

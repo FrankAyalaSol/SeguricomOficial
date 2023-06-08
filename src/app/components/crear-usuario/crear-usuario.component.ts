@@ -27,7 +27,7 @@ export class CrearUsuarioComponent implements OnInit {
       .subscribe(
         res => {
           console.log(res);
-          localStorage.setItem('token', res.token);
+          //localStorage.setItem('token', res.token);
           this.router.navigate(['/Iniciar_Sesion']);
         },
         err => console.log(err)
