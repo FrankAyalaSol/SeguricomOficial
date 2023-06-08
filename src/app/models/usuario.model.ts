@@ -1,5 +1,5 @@
 export class Usuario{
-  _id?:number;
+  _id?:string;
     nombre: string;
     apellido: string;
     correo_electronico: string;
@@ -7,6 +7,7 @@ export class Usuario{
     tipo_cliente: string;
     dni: number;
     fecha_nacimiento: string;
+    direccion: string;
     password: string;
     rol: number;
 
@@ -18,6 +19,7 @@ export class Usuario{
     tipo_cliente: string,
     dni: number,
     fecha_nacimiento: string,
+    direccion: string,
     password: string,
     rol: number
   ){
@@ -28,6 +30,7 @@ export class Usuario{
     this.tipo_cliente = tipo_cliente;
     this.dni = dni;
     this.fecha_nacimiento = fecha_nacimiento;
+    this.direccion = direccion;
     this.password = password;
     this.rol=rol;
   }
