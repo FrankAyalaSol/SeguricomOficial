@@ -13,7 +13,11 @@ export class GenerarOrdenVisitaComponent implements OnInit {
   visitaForm: FormGroup;
 
   visita={
-    tipo: '',
+    tipos: '',
+    dato1: '',
+    dato2: '',
+    dato3: '',
+    dato4: '',
     pregunta1: '',
     pregunta2: '',
     pregunta3: '',
@@ -22,10 +26,18 @@ export class GenerarOrdenVisitaComponent implements OnInit {
     pregunta6: ''
 
   }
+  tipo_cliente = [
+    {tipo: "Casa"},
+    {tipo: "Empresa"}
+  ]
 
   constructor(private fb: FormBuilder,  private authService: AuthService) {
     this.visitaForm = this.fb.group({
-      tipo: ['', Validators.required],
+      tipos: ['', Validators.required],
+      dato1: ['', Validators.required],
+      dato2: ['', Validators.required],
+      dato3: ['', Validators.required],
+      dato4: ['', Validators.required],
       pregunta1: ['', Validators.required],
       pregunta2: ['', Validators.required],
       pregunta3: ['', Validators.required],
@@ -33,6 +45,8 @@ export class GenerarOrdenVisitaComponent implements OnInit {
       pregunta5: ['', Validators.required],
       pregunta6: ['', Validators.required],
     })
+
+  
    }
 
   ngOnInit(): void {

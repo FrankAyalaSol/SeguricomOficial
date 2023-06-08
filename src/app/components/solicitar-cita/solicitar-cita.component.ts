@@ -16,7 +16,7 @@ export class SolicitarCitaComponent implements OnInit {
     nombre: '',
     numero: '',
     email: '',
-    tipo: ''
+    tipos: ''
   }
 
   constructor(private fb: FormBuilder, private authService: AuthService) {
@@ -24,9 +24,13 @@ export class SolicitarCitaComponent implements OnInit {
       nombre:['', Validators.required],
       numero:['', Validators.required],
       email:['', Validators.required],
-      tipo:['', Validators.required],
+      tipos:['', Validators.required],
     })
    }
+   tipo_cliente = [
+    {tipo: "Casa"},
+    {tipo: "Empresa"}
+  ]
 
   ngOnInit(): void {
   }

@@ -5,20 +5,40 @@
                 <div class="card-body text-center">
                         <span class="titulo">GENERAR ORDEN DE VISITA</span>
                     <form class="mt-3" [formGroup]="visitaForm" (ngSubmit)="agregarVisita()">
-                        <div class="mb-3">
-                            <select type="text" formControlName="tipo" 
-                                class="form-control form-control-lg">
-                                <option>Casa</option>
-                                <option>Empresa</option>
+                        <div class="mb-3 mt-3">
+                            <label class="form-label float-start">Nombre</label>
+                            <input type="text" formControlName="dato1" 
+                                class="form-control form control-lg">
+                        </div>
+                        <div class="mb-3 mt-3">
+                            <label class="form-label float-start">Apellidos</label>
+                            <input type="text" formControlName="dato2" 
+                                class="form-control form control-lg">
+                        </div>
+                        <div class="mb-3 mt-3">
+                            <label class="form-label float-start">Telefono</label>
+                            <input type="text" formControlName="dato3" 
+                                class="form-control form control-lg">
+                        </div>
+                        <div class="mb-3 mt-3">
+                            <label class="form-label float-start">Dirección</label>
+                            <input type="text" formControlName="dato4" 
+                                class="form-control form control-lg">
+                        </div>                        
+                        <div class="input-group flex-nowrap align-items-center">
+                            <label class="pe-3">Tipo de Cliente</label>
+                            <select type="text" class="form-select" aria-label="Default select example" formControlName="tipos"
+                                [(ngModel)]="visita.tipos">
+                                <option *ngFor="let tipo of tipo_cliente" [value]="tipo.tipo">{{tipo.tipo}}</option>
                             </select>
                             <div class="text-danger"
-                                    *ngIf="visitaForm.get('tipo')?.hasError('required') && visitaForm.get('tipo')?.touched">
+                                    *ngIf="visitaForm.get('tipos')?.hasError('required') && visitaForm.get('tipos')?.touched">
                                     <span>El Tipo <strong>es obligatorio</strong></span>
                             </div>
                         </div>
                         <div class="mb-3 mt-3">
                             <label class="form-label float-start">¿Es casa o Departamento?</label>
-                            <input type="text" formControlName="pregunta1" 
+                            <input type="text" formControlName="pregunta1"
                                 class="form-control form control-lg" placeholder="Escriba aqui...">
                                 <div class="text-danger"
                                     *ngIf="visitaForm.get('pregunta1')?.hasError('required') && visitaForm.get('pregunta1')?.touched">

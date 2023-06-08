@@ -29,20 +29,20 @@
                                     <span>El Email <strong>es obligatorio</strong></span>
                                 </div>
                         </div>
-                        <div class="mb-3">
-                            <select type="text" formControlName="tipo" 
-                                class="form-control form-control-lg" >
-                                <option>Persona</option>
-                                <option>Empresa</option>
+                        <div class="input-group flex-nowrap align-items-center">
+                            <label class="pe-3">Tipo de Cliente</label>
+                            <select type="text" class="form-select" aria-label="Default select example" formControlName="tipos"
+                                [(ngModel)]="cita.tipos">
+                                <option *ngFor="let tipo of tipo_cliente" [value]="tipo.tipo">{{tipo.tipo}}</option>
                             </select>
                             <div class="text-danger"
-                                    *ngIf="citaForm.get('tipo')?.hasError('required') && citaForm.get('tipo')?.touched">
+                                    *ngIf="citaForm.get('tipos')?.hasError('required') && citaForm.get('tipos')?.touched">
                                     <span>El Tipo <strong>es obligatorio</strong></span>
                             </div>
                         </div>
                         <div class="mb-3">
                             <button routerLink="/Pagina_Cliente" class="btn btn-secondary btn-lg float-start">VOLVER</button>
-                            <button type="submit" class="btn btn-secondary btn-lg float-end">ACEPTAR</button>
+                            <button type="submit" [disabled]="citaForm.invalid" class="btn btn-success btn-lg float-end">ACEPTAR</button>
                         </div>
                     </form>
                 </div>
