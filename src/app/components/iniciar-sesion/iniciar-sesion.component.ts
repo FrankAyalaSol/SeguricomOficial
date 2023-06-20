@@ -23,6 +23,7 @@ export class IniciarSesionComponent implements OnInit {
           console.log(res)
           localStorage.setItem('token', res.token);
           localStorage.setItem('rol', res.rol);
+          localStorage.setItem('id', res._id);
           if(res.rol == "1") {
             this.router.navigate(['/Pagina_Administrador']);
           } else if (res.rol == "2"){

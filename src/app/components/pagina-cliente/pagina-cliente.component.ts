@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
+import { Usuario } from 'src/app/models/usuario.model';
+import { OrderServiceService } from 'src/app/services/order.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-pagina-cliente',
@@ -7,10 +10,23 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./pagina-cliente.component.css']
 })
 export class PaginaClienteComponent implements OnInit {
+  usuarioData = <Usuario>{};
+  id: string| null;
 
-  constructor(public authService: AuthService) { }
+  constructor(public authService: AuthService, private order_service:OrderServiceService,private aRoute:ActivatedRoute, private router: Router) {
+    this.id = this.aRoute.snapshot.paramMap.get('id')
+   }
 
   ngOnInit(): void {
   }
-
-}
+  obtenerId() {
+      if(this.id!==null){
+        this.order_service.GetClient('id').subscribe(
+          data => {
+            console.log(data);
+            this.router.navigate(['/Solicitar_Cita', this.id])
+          },
+          error => {console.log(error)})
+      }
+    }
+  }

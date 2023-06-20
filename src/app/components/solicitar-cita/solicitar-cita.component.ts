@@ -55,6 +55,7 @@ export class SolicitarCitaComponent implements OnInit {
 
   ngOnInit(): void {
     //this.initFormParent()
+
     this.obtenerCliente();
 
   }
