@@ -53,17 +53,14 @@ const routes: Routes = [
   {
     path: 'Asignar_Especialista',
     component:AsignarEspecialistaComponent,
-    canActivate: [AuthGuard]
   },
   {
     path: 'Asignar_Especialista_Cliente',
     component:AsignarEspecialistaClienteComponent,
-    canActivate: [AuthGuard]
   },
   {
     path: 'Visualizar_Especialista',
     component:VisualizarEspecialistaComponent,
-    canActivate: [AuthGuard]
   },
   {
     path: 'Pagina_Administrador', //private
@@ -72,8 +69,8 @@ const routes: Routes = [
   },
   {
     path: 'Solicitar_Cita', //private
-     component:SolicitarCitaComponent,
-     canActivate: [AuthGuard]
+     component:SolicitarCitaComponent
+
   },
   {
     path: 'ERROR404',

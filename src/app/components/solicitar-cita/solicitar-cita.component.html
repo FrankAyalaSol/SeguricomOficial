@@ -13,7 +13,7 @@
 
                                     <div class="mb-3 mt-3">
                                       <label class="form-label float-start">Nombre</label>
-                                      <input type="text"   *ngIf="visitaForm.get('nombre')"
+                                      <input type="text" *ngIf="visitaForm.get('nombre')"
                                   class="form-control form control-lg" placeholder="Escriba aqui...">
                                       </div>
 
@@ -97,42 +97,31 @@
                                   </span>
                               </div>
                       </div>
+
                       <div class="mb-3 mt-3">
-                          <label class="form-label float-start">Detalles Adicionales</label>
+                          <label class="form-label float-start">Activos - ¿Que posee, opera, presta, controla, tiene custodia de o es responsable por, compra, vende, repara, diseña, produce, fabrica, ensaya, analiza o mantiene, la empresa?</label>
                           <input type="text" [(ngModel)]="visita.respuesta_6" formControlName="pregunta6"
                               class="form-control form control-lg" placeholder="Escriba aqui...">
                       </div>
                       <div class="mb-3 mt-3">
-                          <label class="form-label float-start">Activos - ¿Que posee, opera, presta, controla, tiene custodia de o es responsable por, compra, vende, repara, diseña, produce, fabrica, ensaya, analiza o mantiene, la empresa?</label>
-                          <input type="text" [(ngModel)]="visita.respuesta_7" formControlName="pregunta7"
-                              class="form-control form control-lg" placeholder="Escriba aqui...">
-                              <div class="text-danger"
-                                  *ngIf="visitaForm.get('pregunta7')?.hasError('required') && visitaForm.get('pregunta7')?.touched">
-                                  <span>
-                                      El dato <strong>es obligatorio</strong>
-                                  </span>
-                              </div>
-                      </div>
-                      <div class="mb-3 mt-3">
-                        <label class="form-label float-start">Exposición - ¿A qué está expuesta la compañía que puede causar o contribuir a dañar, a robar, o a pérdida de propiedad u otros activos de la compañía, o que puedan causar o contribuir a daños físicos de los empleados de la empresa u otros?  </label>
-                        <input type="text" [(ngModel)]="visita.respuesta_8" formControlName="pregunta8"
+                        <label class="form-label float-start">Exposición - ¿A qué puede estar expuesta su compañia? </label>
+                        <input type="text" [(ngModel)]="visita.respuesta_7" formControlName="pregunta7"
                             class="form-control form control-lg" placeholder="Escriba aqui...">
-                            <div class="text-danger"
-                                *ngIf="visitaForm.get('pregunta8')?.hasError('required') && visitaForm.get('pregunta8')?.touched">
-                                <span>
-                                    El dato <strong>es obligatorio</strong>
-                                </span>
-                            </div>
                     </div>
                     <div class="mb-3 mt-3">
                       <label class="form-label float-start">ESTUDIO DE PERDIDAS ( EN CASO SE HAYA TENIDO, SINO DEJARLO EN BLANCO )</label>
-                      <input type="text" [(ngModel)]="visita.respuesta_9" formControlName="pregunta9"
+                      <input type="text" [(ngModel)]="visita.respuesta_8" formControlName="pregunta8"
                           class="form-control form control-lg" placeholder="Escriba aqui...">
                   </div>
-                      <div class="mb-3">
-                          <button routerLink="/Pagina_Cliente" class="btn btn-secondary btn-lg float-start">VOLVER</button>
-                          <button type="submit" class="btn btn-success btn-lg float-end">ACEPTAR</button>
-                      </div>
+                    <div class="mb-3 mt-3">
+                        <label class="form-label float-start">Detalles Adicionales</label>
+                        <input type="text" [(ngModel)]="visita.respuesta_9" formControlName="pregunta9"
+                            class="form-control form control-lg" placeholder="Escriba aqui...">
+                    </div>
+                    <div class="mb-3">
+                      <button routerLink="/Pagina_Cliente" class="btn btn-secondary btn-lg float-start">VOLVER</button>
+                      <button type="submit" class="btn btn-success btn-lg float-end">ACEPTAR</button>
+                  </div>
                   </form>
               </div>
           </div>
