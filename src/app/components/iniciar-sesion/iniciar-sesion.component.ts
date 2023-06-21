@@ -23,7 +23,6 @@ export class IniciarSesionComponent implements OnInit {
           console.log(res)
           localStorage.setItem('token', res.token);
           localStorage.setItem('rol', res.rol);
-          localStorage.setItem('id', res._id);
           if(res.rol == "1") {
             this.router.navigate(['/Pagina_Administrador']);
           } else if (res.rol == "2"){
@@ -31,7 +30,8 @@ export class IniciarSesionComponent implements OnInit {
           } else if (res.rol == "3"){
             this.router.navigate(['/Pagina_Especialista']);
           } else if (res.rol == "4"){
-            this.router.navigate(['/Pagina_Cliente']);
+            this.router.navigate(['/Pagina_Cliente', res._id]);
+            // this.router.navigate(['/Solicitar_Cita/', res._id]);
           }
         });
 

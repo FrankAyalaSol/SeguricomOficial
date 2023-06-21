@@ -36,7 +36,7 @@ const routes: Routes = [
     component:CrearUsuarioComponent
   },
   {
-    path: 'Pagina_Cliente', //private
+    path: 'Pagina_Cliente/:id', //private
      component:PaginaClienteComponent,
      canActivate: [AuthGuard]
   },
@@ -68,7 +68,7 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
-    path: 'Solicitar_Cita', //private
+    path: 'Solicitar_Cita/:id', //private
      component:SolicitarCitaComponent
 
   },

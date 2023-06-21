@@ -61,7 +61,7 @@ export class SolicitarCitaComponent implements OnInit {
   }
 
   obtenerCliente() {
-    console.log(this.id)
+    //console.log(this.id)
     if (this.id !== null) {
       this.order_service.GetClient(this.id).subscribe(
         data => {
@@ -96,10 +96,15 @@ export class SolicitarCitaComponent implements OnInit {
 
   }
 
-  // initFormParent():void{
-  //   this.formParent = new FormGroup({
-
-  //   })
-  // }
+  volver() {
+    if (this.id !== null) {
+      this.order_service.GetClient(this.id).subscribe(
+        data => {
+          this.router.navigate(['/Pagina_Cliente', data._id])
+        },
+        error => { console.log(error) }
+      )
+    }
+  }
 
 }

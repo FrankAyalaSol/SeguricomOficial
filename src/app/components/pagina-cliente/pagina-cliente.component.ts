@@ -10,21 +10,23 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./pagina-cliente.component.css']
 })
 export class PaginaClienteComponent implements OnInit {
-  usuarioData = <Usuario>{};
-  id: string| null;
+  // usuarioData = <Usuario>{};
+
+  id: string | null;
 
   constructor(public authService: AuthService, private order_service:OrderServiceService,private aRoute:ActivatedRoute, private router: Router) {
     this.id = this.aRoute.snapshot.paramMap.get('id')
    }
 
   ngOnInit(): void {
+    // this.obtenerId();
   }
   obtenerId() {
       if(this.id!==null){
-        this.order_service.GetClient('id').subscribe(
+        this.order_service.GetClient(this.id).subscribe(
           data => {
+            this.router.navigate(['/Solicitar_Cita/', data._id])
             console.log(data);
-            this.router.navigate(['/Solicitar_Cita', this.id])
           },
           error => {console.log(error)})
       }
