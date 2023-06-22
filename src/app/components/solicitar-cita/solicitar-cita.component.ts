@@ -88,7 +88,6 @@ export class SolicitarCitaComponent implements OnInit {
     this.order_service.RequestVisitForm(this.visitaForm).subscribe(
       res => {
         console.log(res);
-        //localStorage.setItem('token', res.token);
         this.router.navigate(['/Pagina_Cliente']);
       },
       err => console.log(err)
