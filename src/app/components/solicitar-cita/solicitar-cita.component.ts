@@ -56,42 +56,49 @@ export class SolicitarCitaComponent implements OnInit {
   ngOnInit(): void {
     //this.initFormParent()
 
-    this.obtenerCliente();
+    // this.obtenerCliente();
 
   }
 
-  obtenerCliente() {
-    //console.log(this.id)
-    if (this.id !== null) {
-      this.order_service.GetClient(this.id).subscribe(
-        data => {
-          console.log(data);
-          this.visitaForm.setValue({
-            pregunta1: data.pregunta1,
-            pregunta2: data.pregunta2,
-            pregunta3: data.pregunta3,
-            pregunta4: data.pregunta4,
-            pregunta5: data.pregunta5,
-            pregunta6: data.pregunta6,
-            pregunta7: data.pregunta7,
-            pregunta8: data.pregunta8,
-            pregunta9: data.pregunta9,
-          })
-        },
-        error => {console.log(error)}
-      )
-    }
-  }
+  // obtenerCliente() {
+  //   if (this.id!== null) {
+  //     this.order_service.GetClient(this.id).subscribe(
+  //       data => {
+  //         console.log(data);
+  //         this.visitaForm.setValue({
+  //           pregunta1: data.pregunta1,
+  //           pregunta2: data.pregunta2,
+  //           pregunta3: data.pregunta3,
+  //           pregunta4: data.pregunta4,
+  //           pregunta5: data.pregunta5,
+  //           pregunta6: data.pregunta6,
+  //           pregunta7: data.pregunta7,
+  //           pregunta8: data.pregunta8,
+  //           pregunta9: data.pregunta9,
+  //         })
+  //       },
+  //       error => {console.log(error)}
+  //     )
+  //   }
+  // }
 
   agregarVisita(){
-    console.log(this.visita);
-    this.order_service.RequestVisitForm(this.visitaForm).subscribe(
-      res => {
-        console.log(res);
-        this.router.navigate(['/Pagina_Cliente']);
-      },
-      err => console.log(err)
-    )
+    if(this.id!==null){
+      console.log(this.visita);
+      this.order_service.GetClient(this.id).subscribe(
+        res =>{
+          const idCliente = res._id;
+          this.order_service.RegistrarDetalleEstudio(idCliente,this.visita).subscribe(
+            res => {
+              console.log(res);
+              this.router.navigate(['/Pagina_Cliente',res._id]);
+            },
+            err => {console.log(err)}
+          )
+        }
+      );
+
+    }
 
   }
 

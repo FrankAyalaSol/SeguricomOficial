@@ -6,6 +6,8 @@ export class Usuario{
     celular: number;
     tipo_cliente: string;
     dni: number;
+    ruc:string;
+    direccion:string;
     fecha_nacimiento: string;
     password: string;
     rol: number;
@@ -17,6 +19,8 @@ export class Usuario{
     celular: number,
     tipo_cliente: string,
     dni: number,
+    ruc:string,
+    direccion:string,
     fecha_nacimiento: string,
     password: string,
     rol: number
@@ -27,6 +31,8 @@ export class Usuario{
     this.celular = celular;
     this.tipo_cliente = tipo_cliente;
     this.dni = dni;
+    this.ruc = ruc;
+    this.direccion = direccion;
     this.fecha_nacimiento = fecha_nacimiento;
     this.password = password;
     this.rol=rol;

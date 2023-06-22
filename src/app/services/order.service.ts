@@ -16,8 +16,8 @@ export class OrderServiceService {
       return this.http.get(this.URL + _id);
     }
 
-    RequestVisitForm(user:any){
-      return this.http.post<any>(this.URL + user.id + '/detalleestudio', user);
+    RegistrarDetalleEstudio(idCliente:any,detalleEstudio:any){
+      return this.http.post<any>(this.URL + idCliente, detalleEstudio);
     }
 
 }

@@ -19,7 +19,6 @@ export class CrearUsuarioComponent implements OnInit {
   ngOnInit() {
 
   }
-
   signUp() {
     console.log(this.user);
 

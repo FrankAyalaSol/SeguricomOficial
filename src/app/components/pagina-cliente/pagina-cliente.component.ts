@@ -11,7 +11,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class PaginaClienteComponent implements OnInit {
   // usuarioData = <Usuario>{};
-
+  public isDetalleEstudio:boolean =false;
   id: string | null;
 
   constructor(public authService: AuthService, private order_service:OrderServiceService,private aRoute:ActivatedRoute, private router: Router) {
@@ -31,4 +31,5 @@ export class PaginaClienteComponent implements OnInit {
           error => {console.log(error)})
       }
     }
+
   }
