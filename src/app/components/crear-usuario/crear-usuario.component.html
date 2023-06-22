@@ -30,18 +30,14 @@
                     <option *ngFor="let tipo of tipo_cliente" [value]="tipo.tipo">{{tipo.tipo}}</option>
                 </select>
             </div>
-            <ng-container #dni *ngIf="!tipo_cliente[0]; else ruc">
-              <div class="input-group flex-nowrap">
+              <div class="input-group flex-nowrap" *ngIf="user.tipo_cliente==='Persona'">
                   <span class="input-group-text" id="addon-wrapping"><i class='bx bx-id-card' ></i></span>
                   <input type="text" [(ngModel)]="user.dni" name="document_number" class="form-control" placeholder="Número de documento" required>
               </div>
-            </ng-container>
-            <ng-template #ruc>
-              <div class="input-group flex-nowrap">
+              <div class="input-group flex-nowrap" *ngIf="user.tipo_cliente==='Empresa'">
                 <span class="input-group-text" id="addon-wrapping"><i class='bx bx-id-card' ></i></span>
                 <input type="text" [(ngModel)]="user.ruc" name="ruc_number" class="form-control" placeholder="RUC" required>
               </div>
-            </ng-template>
         <div class="input-group flex-nowrap">
           <span class="input-group-text" id="addon-wrapping"><i class='bx bx-id-card' ></i></span>
           <input type="text" [(ngModel)]="user.direccion" name="direction" class="form-control" placeholder="Direccion" required>
