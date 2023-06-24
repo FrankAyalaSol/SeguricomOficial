@@ -26,7 +26,7 @@ export class IniciarSesionComponent implements OnInit {
           if(res.rol == "1") {
             this.router.navigate(['/Pagina_Administrador']);
           } else if (res.rol == "2"){
-            this.router.navigate(['/Pagina_Gerente']);
+            this.router.navigate(['/Pagina_Gerente', res._id]);
           } else if (res.rol == "3"){
             this.router.navigate(['/Pagina_Especialista']);
           } else if (res.rol == "4"){

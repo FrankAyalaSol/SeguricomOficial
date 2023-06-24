@@ -51,7 +51,7 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
-    path: 'Asignar_Especialista',
+    path: 'Asignar_Especialista/:id',
     component:AsignarEspecialistaComponent,
     canActivate: [AuthGuard]
   },
