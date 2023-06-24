@@ -5,7 +5,7 @@ export class Usuario{
     correo_electronico: string;
     celular: number;
     tipo_cliente: string;
-    dni: number;
+    dni: string;
     ruc:string;
     direccion:string;
     fecha_nacimiento: string;
@@ -18,7 +18,7 @@ export class Usuario{
     correo_electronico: string,
     celular: number,
     tipo_cliente: string,
-    dni: number,
+    dni: string,
     ruc:string,
     direccion:string,
     fecha_nacimiento: string,

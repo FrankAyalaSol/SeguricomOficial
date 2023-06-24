@@ -46,13 +46,14 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
-    path: 'Pagina_Gerente', //private
+    path: 'Pagina_Gerente/:id', //private
     component:PaginaGerenteComponent,
     canActivate: [AuthGuard]
   },
   {
     path: 'Asignar_Especialista',
     component:AsignarEspecialistaComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'Asignar_Especialista_Cliente',
