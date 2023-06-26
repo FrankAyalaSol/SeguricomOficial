@@ -8,7 +8,6 @@ export class Usuario{
     dni: string;
     ruc:string;
     direccion:string;
-    fecha_nacimiento: string;
     password: string;
     rol: number;
 
@@ -21,7 +20,6 @@ export class Usuario{
     dni: string,
     ruc:string,
     direccion:string,
-    fecha_nacimiento: string,
     password: string,
     rol: number
   ){
@@ -33,7 +31,6 @@ export class Usuario{
     this.dni = dni;
     this.ruc = ruc;
     this.direccion = direccion;
-    this.fecha_nacimiento = fecha_nacimiento;
     this.password = password;
     this.rol=rol;
   }
