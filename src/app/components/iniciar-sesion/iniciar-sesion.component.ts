@@ -21,19 +21,21 @@ export class IniciarSesionComponent implements OnInit {
       .subscribe(
         res => {
           console.log(res)
-          localStorage.setItem('token', res.token);
-          localStorage.setItem('rol', res.rol);
-          if(res.rol == "1") {
+          localStorage.setItem('token', res.jwt);
+          localStorage.setItem('rol', res.cliente.rol);
+          if(res.cliente.rol == 1) {
             this.router.navigate(['/Pagina_Administrador']);
-          } else if (res.rol == "2"){
-            this.router.navigate(['/Pagina_Gerente', res._id]);
-          } else if (res.rol == "3"){
+          } else if (res.cliente.rol == 2){
+            this.router.navigate(['/Pagina_Gerente', res.cliente._id]);
+          } else if (res.cliente.rol == 3){
             this.router.navigate(['/Pagina_Especialista']);
-          } else if (res.rol == "4"){
-            this.router.navigate(['/Pagina_Cliente', res._id]);
+          } else if (res.cliente.rol == 4){
+            this.router.navigate(['/Pagina_Cliente', res.cliente._id]);
             // this.router.navigate(['/Solicitar_Cita/', res._id]);
           }
-        });
+        },
+        error => {console.log(error);}
+      );
 
   }
 }
