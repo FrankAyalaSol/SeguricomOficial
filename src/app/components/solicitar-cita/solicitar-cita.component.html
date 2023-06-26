@@ -77,13 +77,14 @@
                           class="form-control form control-lg" placeholder="Escriba aqui...">
                   </div>
                     <div class="mb-3 mt-3">
-                        <label class="form-label float-start">Detalles Adicionales</label>
-                        <input type="text" [(ngModel)]="visita.respuesta_9" formControlName="pregunta9"
-                            class="form-control form control-lg" placeholder="Escriba aqui...">
+                        <label class="form-label float-start">¿Que necesita?</label>
+                        <textarea type="text" [(ngModel)]="visita.respuesta_9" formControlName="pregunta9"
+                            class="form-control form control-lg" placeholder="Escriba aqui..." cols="30" rows="10">
+                        </textarea>
                     </div>
                     <div class="mb-3">
                       <button (click)="volver()" class="btn btn-secondary btn-lg float-start">VOLVER</button>
-                      <button type="submit" (click)="volver()" class="btn btn-success btn-lg float-end">ACEPTAR</button>
+                      <button type="submit" class="btn btn-success btn-lg float-end">Solicitar</button>
                   </div>
                   </form>
               </div>

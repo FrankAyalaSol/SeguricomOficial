@@ -1,9 +1,5 @@
 export class OrderVisita{
   _id?:number;
-  // nombre:string;
-  // apellido:string;
-  // celular:string;
-  // direccion:string;
   respuesta_1:string;
   respuesta_2:string;
   respuesta_3:string;
@@ -15,10 +11,6 @@ export class OrderVisita{
   respuesta_9:string;
 
   constructor(
-    // nombre:string,
-    // apellido:string,
-    // celular:string,
-    // direccion:string,
     respuesta_1:string,
     respuesta_2:string,
     respuesta_3:string,
@@ -29,10 +21,6 @@ export class OrderVisita{
     respuesta_8:string,
     respuesta_9:string
   ){
-    // this.nombre = nombre;
-    // this.apellido = apellido;
-    // this.celular = celular;
-    // this.direccion = direccion;
     this.respuesta_1 = respuesta_1;
     this.respuesta_2 = respuesta_2;
     this.respuesta_3 = respuesta_3;
