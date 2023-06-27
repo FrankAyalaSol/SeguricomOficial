@@ -9,13 +9,22 @@ import { AuthService } from 'src/app/services/auth.service';
 // styleUrls: ['./pagina-gerente.component.css']
 })
 export class PaginaGerenteComponent implements OnInit {
+  public clientes : any;
   id: string | null;
   constructor(public authService: AuthService, private asignate_specialist:AsignateSpecialistServiceService,private aRoute:ActivatedRoute, private router: Router) {
     this.id = this.aRoute.snapshot.paramMap.get('id')
    }
 
-  ngOnInit(): void {
+  ngOnInit(){
     // this.obtenerId();
+    this.asignate_specialist.getClientes().subscribe(
+      response => {
+        this.clientes = response.clientesP;
+      },
+      error => {
+
+      }
+    );
   }
   /*obtenerId() {
       if(this.id!==null){

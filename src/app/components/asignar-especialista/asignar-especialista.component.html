@@ -61,12 +61,12 @@
 
               <div class="header">
                   <h1 class="header-title">
-                      Usuarios
+                      Clientes Pendiente
                   </h1>
                   <nav aria-label="breadcrumb">
                       <ol class="breadcrumb">
                           <li class="breadcrumb-item"><a [routerLink]="['/dashboard']" >Dashboard</a></li>
-                          <li class="breadcrumb-item"><a>Usuarios</a></li>
+                          <li class="breadcrumb-item"><a>Clientes Pendiente</a></li>
                       </ol>
                   </nav>
               </div>
@@ -83,24 +83,27 @@
                               <thead>
                                   <tr>
                                       <th>Nombres</th>
-                                      <th>Correo</th>
-                                      <th>Rol</th>
+                                      <th>Necesidad</th>
+                                      <th>Estado</th>
+                                      <th>Fecha y Hora Estudio</th>
                                       <th>Opciones</th>
                                   </tr>
                               </thead>
-                              <tbody >                                 
+                              <tbody *ngFor="let item of citasP">                                 
                                       <td>
-                                          a
+                                          {{item.cliente.nombre}} {{item.cliente.apellido}}
                                       </td>
-                                      <td>b</td>
-                                      <td>c</td>
+                                      <td>{{ item.respuesta_9 }}</td>
+                                      <td>{{item.estado}}</td>
+                                      <td>{{item.respuesta_8.split("T")}}</td>
                                       <td>
                                           <div class="btn-group">
                                               <button type="button" class="btn mb-1 btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                   <i class="fas fa-cog"></i>
                                               </button>
-                                              <div class="dropdown-menu">
-                                                  <a class="dropdown-item">Editar registro</a>
+                                              <div class="dropdown-menu" >
+                                                  <a class="dropdown-item" (click)="asignarEspecialista(item._id)" type="button">Asignar Especialista</a>
+                                                  <a class="dropdown-item" (click)="asignarEspecialista(item._id)" type="button">Asignar</a>
                                                   <!--<a class="dropdown-item" (click)="eliminar(item._id)" type="button"
                                                   >Eliminar Registro</a>-->
                                                   <!--<a class="dropdown-item" (click)="eliminar(item._id)">Eliminar registro</a>

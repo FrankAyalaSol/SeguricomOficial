@@ -28,13 +28,18 @@
                 </li>
 -->
                 <li class="sidebar-item" *ngIf="rol == 2" routerLinkActive="sidebar-item active">
-                    <a class="sidebar-link"  >
+                    <a class="sidebar-link" (click)="obtenerIdEspecialista()"  >
                         <i class="align-middle mr-2 fas fa-fw fas fa-users"></i> <span class="align-middle">Asignar Especialista</span>
                     </a>
                 </li>
                 <li class="sidebar-item" *ngIf="rol == 4" routerLinkActive="sidebar-item active">
                     <a class="sidebar-link" (click)="obtenerId()" >
                         <i class="align-middle mr-2 fas fa-fw fas fa-users"></i> <span class="align-middle">Solicitar Estudio</span>
+                    </a>
+                </li>
+                <li class="sidebar-item" *ngIf="rol == 3" routerLinkActive="sidebar-item active">
+                    <a class="sidebar-link" (click)="obtenerIdEspecialista()"  >
+                        <i class="align-middle mr-2 fas fa-fw fas fa-users"></i> <span class="align-middle">Estudios Pendientes</span>
                     </a>
                 </li>
               <!--

@@ -33,5 +33,9 @@ export class SidebarComponent implements OnInit {
       this.router.navigate(['/Solicitar_Cita/', this.id]);
     }
   }
-
+  obtenerIdEspecialista() {
+    if (this.id !== null) {
+      this.router.navigate(['/Asignar_Especialista/', this.id]);
+    }
+  }
 }

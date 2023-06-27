@@ -10,16 +10,51 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./asignar-especialista.component.css']
 })
 export class AsignarEspecialistaComponent implements OnInit {
-
+  public citasP : any;
+  public detalle_id: any;
   id: string | null;
   user = <Usuario>{};
 
   constructor(public authService: AuthService, private asignate_specialist:AsignateSpecialistServiceService,private aRoute:ActivatedRoute, private router: Router) {
     this.id = this.aRoute.snapshot.paramMap.get('id')
    }
-  ngOnInit(): void {
+  ngOnInit() {
+    this.asignate_specialist.getClientesP().subscribe(
+      response => {
+        this.citasP = response.clientesP;
+      },
+      error => {
+
+      }
+    );
   }
 
+  get_id(id:any){
+    this.detalle_id = id;
+  }
+
+  asignarEspecialista(id:any){
+
+
+      this.asignate_specialist.putClientes({_id: id}).subscribe(          
+        response => {
+        this.asignate_specialist.getClientesP().subscribe(
+          response => {
+            this.citasP = response.clientesP;
+          },
+          error => {
+            
+          }
+        );
+      },
+      error => {
+
+      });
+
+          //this.success_message = 'Se aumentó el stock correctamente';
+
+  
+  }
   // obtenerClientesPendientes(){
   //   if(this.id!==null){
   //     console.log(this.id);
