@@ -27,6 +27,7 @@ import { PaginaAdministradorComponent } from './components/pagina-administrador/
 import { VisualizarEspecialistaComponent } from './components/visualizar-especialista/visualizar-especialista.component';
 import { AsignarEspecialistaComponent } from './components/asignar-especialista/asignar-especialista.component';
 import { AsignarEspecialistaClienteComponent } from './components/asignar-especialista-cliente/asignar-especialista-cliente.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { AsignarEspecialistaClienteComponent } from './components/asignar-especi
     PaginaAdministradorComponent,
     VisualizarEspecialistaComponent,
     AsignarEspecialistaComponent,
-    AsignarEspecialistaClienteComponent
+    AsignarEspecialistaClienteComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,

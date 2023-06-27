@@ -60,7 +60,7 @@ export class AsignarEspecialistaComponent implements OnInit {
 
   // }
 
-  volver() {
+  /*volver() {
     if (this.id !== null) {
       this.asignate_specialist.GetClient(this.id).subscribe(
         data => {
@@ -68,6 +68,11 @@ export class AsignarEspecialistaComponent implements OnInit {
         },
         error => { console.log(error) }
       )
+    }
+  }*/
+  volver() {
+    if (this.id !== null) {
+      this.router.navigate(['/Pagina_Gerente', this.id]);
     }
   }
 

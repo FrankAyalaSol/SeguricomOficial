@@ -17,7 +17,7 @@ export class PaginaGerenteComponent implements OnInit {
   ngOnInit(): void {
     // this.obtenerId();
   }
-  obtenerId() {
+  /*obtenerId() {
       if(this.id!==null){
         this.asignate_specialist.GetClient(this.id).subscribe(
           data => {
@@ -25,6 +25,11 @@ export class PaginaGerenteComponent implements OnInit {
             console.log(data);
           },
           error => {console.log(error)})
+      }
+    }*/
+    obtenerId() {
+      if (this.id !== null) {
+        this.router.navigate(['/Asignar_Especialista/', this.id]);
       }
     }
 

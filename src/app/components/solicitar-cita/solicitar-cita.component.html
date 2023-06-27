@@ -73,8 +73,9 @@
                     </div>
                     <div class="mb-3 mt-3">
                       <label class="form-label float-start"> Escoja un dia</label>
-                      <input type="date" [(ngModel)]="visita.respuesta_8" formControlName="pregunta8"
-                          class="form-control form control-lg" placeholder="Escriba aqui...">
+                        <input type="datetime-local" id="meeting-time" [(ngModel)]="visita.respuesta_8"
+                        name="meeting-time" value="2023-06-28T00:00" formControlName="pregunta8"
+                        min="2023-06-27T00:00" max="2030-12-31T00:00">
                   </div>
                     <div class="mb-3 mt-3">
                         <label class="form-label float-start">¿Que necesita?</label>

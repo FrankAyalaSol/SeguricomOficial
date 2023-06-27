@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class OrderServiceService {
+  public rol: any;
     private URL = 'http://localhost:3000/api/cliente/'
 
     constructor(private http: HttpClient, private router: Router) { }
@@ -17,6 +18,16 @@ export class OrderServiceService {
 
     RegistrarDetalleEstudio(idCliente:any,detalleEstudio:any){
       return this.http.post<any>(this.URL + idCliente, detalleEstudio);
+    }
+    getIdentity(): Observable<any> {
+      let rol = JSON.parse(localStorage.getItem('rol')!);
+      if (rol) {
+        this.rol = rol;
+      } else {
+        this.rol = null;
+      }
+  
+      return this.rol;
     }
 
 }
