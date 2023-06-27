@@ -4,7 +4,7 @@ import { AuthService } from 'src/app/services/auth.service';
 @Component({
   selector: 'app-pagina-especialista',
   templateUrl: './pagina-especialista.component.html',
-  styleUrls: ['./pagina-especialista.component.css']
+  //styleUrls: ['./pagina-especialista.component.css']
 })
 export class PaginaEspecialistaComponent implements OnInit {
 

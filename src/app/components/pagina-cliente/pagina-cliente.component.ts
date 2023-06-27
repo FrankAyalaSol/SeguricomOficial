@@ -6,7 +6,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-pagina-cliente',
   templateUrl: './pagina-cliente.component.html',
-  styleUrls: ['./pagina-cliente.component.css'],
+  //styleUrls: ['./pagina-cliente.component.css'],
 })
 export class PaginaClienteComponent implements OnInit {
   public isDetalleEstudio: boolean = false;

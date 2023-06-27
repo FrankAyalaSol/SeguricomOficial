@@ -6,7 +6,7 @@ import { AuthService } from 'src/app/services/auth.service';
 @Component({
   selector: 'app-pagina-gerente',
   templateUrl: './pagina-gerente.component.html',
-  styleUrls: ['./pagina-gerente.component.css']
+// styleUrls: ['./pagina-gerente.component.css']
 })
 export class PaginaGerenteComponent implements OnInit {
   id: string | null;
