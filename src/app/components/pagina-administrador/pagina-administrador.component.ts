@@ -8,7 +8,9 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class PaginaAdministradorComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public authService: AuthService,
+  ) { }
 
   ngOnInit(): void {
   }
