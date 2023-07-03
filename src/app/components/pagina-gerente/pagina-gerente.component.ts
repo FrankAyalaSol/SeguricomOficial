@@ -38,7 +38,7 @@ export class PaginaGerenteComponent implements OnInit {
     }*/
     obtenerId() {
       if (this.id !== null) {
-        this.router.navigate(['/Asignar_Especialista/', this.id]);
+        this.router.navigate(['/Asignar_Especialista/:id', this.id]);
       }
     }
 
