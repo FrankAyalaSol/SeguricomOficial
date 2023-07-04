@@ -110,6 +110,12 @@ const routes: Routes = [
     component:PrincipalComponent
   },
   {
+
+    path: 'registrar-detalle-cliente/:id',
+    component:RegistrarDetalleClienteComponent,
+    canActivate: [AuthGuard]
+  },
+  {
     path: '**',
     redirectTo: 'ERROR404',
     pathMatch:'full'
