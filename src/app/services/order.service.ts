@@ -8,7 +8,8 @@ import { Observable } from 'rxjs';
 })
 export class OrderServiceService {
   public rol: any;
-    private URL = 'http://localhost:3000/api/cliente/'
+    private URL = 'http://localhost:3000/api/cliente/';
+    private URLESPECIALISTA = 'http://localhost:3000/api/especialista/';
 
     constructor(private http: HttpClient, private router: Router) { }
 
@@ -19,6 +20,11 @@ export class OrderServiceService {
     RegistrarDetalleEstudio(idCliente:any,detalleEstudio:any){
       return this.http.post<any>(this.URL + idCliente, detalleEstudio);
     }
+
+    RegistrarDetalleVisita(idCliente:any, detalleEstudio:any){
+      return this.http.post<any>(this.URLESPECIALISTA + idCliente, detalleEstudio);
+    }
+
     getIdentity(): Observable<any> {
       let rol = JSON.parse(localStorage.getItem('rol')!);
       if (rol) {

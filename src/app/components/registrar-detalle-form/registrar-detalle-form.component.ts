@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { RegistrarDetalle } from 'src/app/models/RegistrarDetalle.model';
 import { OrderServiceService } from 'src/app/services/order.service';
 import { ActivatedRoute } from '@angular/router';
+import { AsignateSpecialistServiceService } from 'src/app/services/asignate-specialist.service.service';
 
 
 @Component({
@@ -12,7 +13,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./registrar-detalle-form.component.css']
 })
 export class RegistrarDetalleFormComponent implements OnInit {
-
+  public detail:any;
   id: string | null;
   isFieldsBlocked: boolean = false;
   detalleForm!: FormGroup;
@@ -25,6 +26,7 @@ export class RegistrarDetalleFormComponent implements OnInit {
     private fb: FormBuilder,
     private router: Router,
     private order_service: OrderServiceService,
+    private asignar_especialista: AsignateSpecialistServiceService,
     private aRoute: ActivatedRoute
   ) {
     this.detalleForm = this.fb.group({
@@ -42,7 +44,41 @@ export class RegistrarDetalleFormComponent implements OnInit {
     this.id = this.aRoute.snapshot.paramMap.get('id');
   }
 
-  ngOnInit(): void {}
+  ngOnInit() {}
+  onSubmit(userForm:any){
+    if(userForm.valid){
+      this.asignar_especialista.postDetalleVisita({
+        password: userForm.value.password,
+        nombres: userForm.value.nombres,
+        email: userForm.value.email,
+        role: userForm.value.role,
+
+      }).subscribe(
+        response =>{
+          this.detail = new RegistrarDetalle('', '', '', '', '','');
+        },
+        error =>{
+          console.log(<any>error);
+        }
+      );
+    }
+  }
+  agregarDetalle() {
+    
+      this.asignar_especialista
+        .postDetalleVisita(this.id)
+        .subscribe(
+          (res) => {
+            console.log(res);
+            this.router.navigate(['/Pagina_Especialista']);
+          },
+          (err) => {
+            console.log(err);
+          }
+        );
+    
+  }
+
 
   volver() {
     if (this.id !== null) {

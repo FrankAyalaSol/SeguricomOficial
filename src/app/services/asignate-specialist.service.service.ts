@@ -40,4 +40,17 @@ export class AsignateSpecialistServiceService {
   GetDetailClient(id: any): Observable<any> {
     return this.http.get(this.IDESPECIALISTA + "detalleCliente/" + id );
   }
+
+  getClientesA():Observable<any>{
+    let headers = new HttpHeaders().set('Content-Type', 'application/json');
+    return this.http.get(this.IDESPECIALISTA+"clientes", { headers: headers });
+  }
+
+  postDetalleVisita(data: any):Observable<any> {
+    let headers = new HttpHeaders().set('Content-Type', 'application/json');
+    return this.http.put(this.IDESPECIALISTA + data._id, {
+      headers: headers,
+    });
+  }
+
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Usuario } from 'src/app/models/usuario.model';
 import { AsignateSpecialistServiceService } from 'src/app/services/asignate-specialist.service.service';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-registrar-detalle-cliente',
@@ -12,13 +13,20 @@ export class RegistrarDetalleClienteComponent implements OnInit {
   
   users: any[] = [];
   id: string | null;
-
-  constructor(private asignar_especialista: AsignateSpecialistServiceService, private aRoute:ActivatedRoute, private router: Router) {
+  public clientes : any;
+  constructor(private asignar_especialista: AsignateSpecialistServiceService,public authService: AuthService,private aRoute:ActivatedRoute, private router: Router) {
     this.id = this.aRoute.snapshot.paramMap.get('id')
   }
 
-  ngOnInit(): void {
-    this.obtenerDetalleCliente();
+  ngOnInit(){
+    this.asignar_especialista.getClientesA().subscribe(
+      response => {
+        this.clientes = response.clientesP;
+      },
+      error => {
+
+      }
+    );
   }
 
   obtenerDetalleCliente(){
@@ -33,4 +41,7 @@ export class RegistrarDetalleClienteComponent implements OnInit {
     }
   }
 
+  obtenerDetalle() {
+    this.router.navigate(['/registrar-detalle-form/']);
+}
 }
