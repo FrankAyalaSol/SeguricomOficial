@@ -42,6 +42,11 @@
                         <i class="align-middle mr-2 fas fa-fw fas fa-users"></i> <span class="align-middle">Estudios Pendientes</span>
                     </a>
                 </li>
+                <li class="sidebar-item" *ngIf="rol == 3" routerLinkActive="sidebar-item active">
+                    <a class="sidebar-link" (click)="obtenerIdEspecialista2()"  >
+                        <i class="align-middle mr-2 fas fa-fw fas fa-users"></i> <span class="align-middle">Registrar Detalle</span>
+                    </a>
+                </li>
               <!--
                 <li class="sidebar-item" routerLinkActive="sidebar-item active">
                     <a class="sidebar-link"   >

@@ -26,6 +26,25 @@
   border-radius: 10px;
 
 }
+.iniciar-sesion-btn{
+  background-color: #CE0A71;
+  border-radius: 8px;
+  padding: 5px ;
+}
+
+.iniciar-sesion-btn a{
+  color: white;
+}
+
+.registrarse-btn{
+  background-color: #FFE7F3;
+  border-radius: 8px;
+  padding: 5px ;
+}
+
+.registrarse-btn a{
+  color: #CE0A71;
+}
 
 .contenido .solicitar-cotizacion{
   background-color: #CE0A71;
