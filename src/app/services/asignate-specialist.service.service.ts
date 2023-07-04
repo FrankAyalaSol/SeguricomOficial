@@ -27,7 +27,9 @@ export class AsignateSpecialistServiceService {
     let headers = new HttpHeaders().set('Content-Type', 'application/json');
     return this.http.get(this.ID+"citas", { headers: headers });
   }
-
+  GetClientSpecialist(): Observable<any> {
+    return this.http.get(this.URLID + "gerente/especialistas" );
+  }
   putClientes(data:any):Observable<any> {
     let headers = new HttpHeaders().set('Content-Type', 'application/json');
     return this.http.put(this.ID + 'citasPendiente/estado/' + data._id, {

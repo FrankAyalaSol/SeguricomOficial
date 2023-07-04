@@ -62,6 +62,7 @@ const routes: Routes = [
   {
     path: 'Visualizar_Especialista',
     component:VisualizarEspecialistaComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'Pagina_Administrador', //private
