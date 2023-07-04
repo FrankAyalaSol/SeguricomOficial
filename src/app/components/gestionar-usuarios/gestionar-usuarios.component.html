@@ -1,0 +1,83 @@
+<section class="body">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Menu Lateral -->
+            <div class="col-2 bg-white vh-100">
+                <img src="../../../assets/LOGO_Seguricom.PNG" class="w-50 m-auto my-5" alt="">
+                <ul>
+                    <h6 class="pb-3">MAIN</h6>
+                    <li class="mb-4">
+                        <i class="fa-solid fa-gauge"></i>
+                        <a class="ms-3 fs-5 text-decoration-none text-black" href="">Dashboard</a>
+                    </li>
+                    <li class="mb-4">
+                        <i class="fa-solid fa-box"></i>
+                        <a class="ms-3 fs-5 text-decoration-none text-black" href="">Buscar</a>
+                    </li>
+                    <li class="mb-4">
+                        <i class="fa-solid fa-tags"></i>
+                        <a class="ms-3 fs-5 text-decoration-none text-black" href="">Estadisticas</a>
+                    </li>
+                    <li class="mb-4">
+                        <i class="fa-solid fa-users"></i>
+                        <a class="ms-3 fs-5 text-decoration-none text-black" href="">Documentos</a>
+                    </li>
+                    <li class="mb-4">
+                        <i class="fa-solid fa-hand-holding-dollar"></i>
+                        <a class="ms-3 fs-5 text-decoration-none text-black" href="">Productos</a>
+                    </li>
+                    <li class="mb-4">
+                        <i class="fa-solid fa-hand-holding-dollar"></i>
+                        <a class="ms-3 fs-5 text-decoration-none text-black" href="">Ajustes</a>
+                    </li>
+                    <li class="mb-4">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <a class="ms-3 fs-5 text-decoration-none text-black" href="">Cerrar Sesión</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Fin Menu Lateral -->
+
+            <!-- Contenido -->
+            <div class="col">
+                <div class="container-fluid mt-5">
+                    <h1 class="py-5">Usuarios</h1>
+                    <div class="bg-white p-4">
+                        <h2 class="fs-4">Listado de Usuarios</h2>
+                        <div class="input-group my-3">
+                            <input type="text" class="form-control form-control-lg" placeholder="Buscar..."
+                                name="filterUsuario" [(ngModel)]="filterUsuario">
+                            <span class="input-group-text" id="basic-addon1"><i
+                                    class="fa-solid fa-magnifying-glass"></i></span>
+                        </div>
+                        <table class="table" *ngIf="listUsuarios.length > 0">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Correo</th>
+                                    <th scope="col">Rol</th>
+                                    <th scope="col">Opciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let usuario of listUsuarios | filter: filterUsuario">
+                                    <td>{{usuario.nombre}}</td>
+                                    <td>{{usuario.correo_electronico}}</td>
+                                    <td>{{usuario.rol}}</td>
+                                    <td>
+                                        <button class="btn btn-warning">
+                                            <i class="fa-solid fa-gear"></i>
+                                            <i class="fa-solid fa-chevron-down ms-2"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h5 style="text-align: start; margin-top: 10px;" *ngIf="listUsuarios.length == 0">No hay usuarios para mostrar</h5>
+                    </div>
+                </div>
+            </div>
+            <!-- Fin Contenido -->
+        </div>
+    </div>
+</section>

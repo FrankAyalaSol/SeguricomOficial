@@ -31,6 +31,10 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { ClientesComponent } from './components/clientes/clientes.component';
 import { EspecialistaComponent } from './components/especialista/especialista.component';
 import { RegistrarDetalleClienteComponent } from './components/registrar-detalle-cliente/registrar-detalle-cliente.component';
+import { GestionarUsuariosComponent } from './components/gestionar-usuarios/gestionar-usuarios.component';
+import { ActualizarUsuarioComponent } from './components/actualizar-usuario/actualizar-usuario.component';
+import { VisualizarUsuarioComponent } from './components/visualizar-usuario/visualizar-usuario.component';
+import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -55,7 +59,11 @@ import { RegistrarDetalleClienteComponent } from './components/registrar-detalle
     SidebarComponent,
     ClientesComponent,
     EspecialistaComponent,
-    RegistrarDetalleClienteComponent
+    RegistrarDetalleClienteComponent,
+    GestionarUsuariosComponent,
+    ActualizarUsuarioComponent,
+    VisualizarUsuarioComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
