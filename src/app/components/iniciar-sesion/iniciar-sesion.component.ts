@@ -11,36 +11,11 @@ import { Usuario } from 'src/app/models/usuario.model';
 export class IniciarSesionComponent implements OnInit {
 
   user = <Usuario>{};
-  public error: any;
   constructor(private authService: AuthService, private router: Router) {}
 
   ngOnInit(): void {
   }
-
-  close_alert(){
-    this.error='';
-  }
   signIn() {
-
-    if(!this.user.correo_electronico){
-      this.error ='Escriba una correo electronico';
-      return;
-    }
-    if (!this.user.correo_electronico.includes('@')) {
-      this.error = 'El correo electrónico debe tener el formato example@gmail.com';
-      return;
-    }
-    if(!this.user.password){
-      this.error ='Escriba una contraseña';
-      return;
-    }
-
-    if (this.error === 'La contraseña no coincide') {
-      this.error = 'Contraseña incorrecta.';
-    } else {
-      this.error = 'Error en el inicio de sesión. Por favor, inténtelo nuevamente.';
-    }
-    
     console.log(this.user);
     this.authService.signInUser(this.user)
       .subscribe(
@@ -59,9 +34,7 @@ export class IniciarSesionComponent implements OnInit {
             // this.router.navigate(['/Solicitar_Cita/', res._id]);
           }
         },
-        error => {console.log(error);
-          
-        }
+        error => {console.log(error);}
       );
 
   }

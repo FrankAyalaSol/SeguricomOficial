@@ -5,14 +5,6 @@
       <h1>Iniciar Sesión</h1>
       <hr>
       <form (submit)="signIn()">
-        <div *ngIf="error"  class="alert alert-danger alert alert-dismissible" role="alert">
-            <div class="alert-message">
-              {{error}}
-            </div>
-            <button type="button" (click)="close_alert()" class="close" data-dismiss="alert" aria-label="Close">
-              <span aria-hidden="true">x</span>
-            </button>
-          </div>
           <div class="input-group flex-nowrap">
               <span class="input-group-text" id="addon-wrapping"><i class='bx bx-envelope' ></i></span>
               <input type="text" [(ngModel)]="user.correo_electronico" name="correo_electronico" class="form-control" placeholder="Correo electrónico" required autofocus>
@@ -23,7 +15,6 @@
           </div>
           <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
       </form>
-      
       <!-- <p>¿No tienes una cuenta? <a href="">Regístrate aquí</a></p> -->
   </div>
 </section>
