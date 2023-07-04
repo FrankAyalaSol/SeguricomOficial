@@ -34,7 +34,6 @@ import { RegistrarDetalleClienteComponent } from './components/registrar-detalle
 import { GestionarUsuariosComponent } from './components/gestionar-usuarios/gestionar-usuarios.component';
 import { ActualizarUsuarioComponent } from './components/actualizar-usuario/actualizar-usuario.component';
 import { VisualizarUsuarioComponent } from './components/visualizar-usuario/visualizar-usuario.component';
-import { RegistrarDetalleFormComponent } from './components/registrar-detalle-form/registrar-detalle-form.component';
 import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
@@ -64,8 +63,7 @@ import { FilterPipe } from './pipes/filter.pipe';
     GestionarUsuariosComponent,
     ActualizarUsuarioComponent,
     VisualizarUsuarioComponent,
-    FilterPipe,
-    RegistrarDetalleFormComponent
+    FilterPipe
   ],
   imports: [
     BrowserModule,
