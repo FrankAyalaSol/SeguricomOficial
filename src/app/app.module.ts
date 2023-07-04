@@ -30,6 +30,7 @@ import { AsignarEspecialistaClienteComponent } from './components/asignar-especi
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { ClientesComponent } from './components/clientes/clientes.component';
 import { EspecialistaComponent } from './components/especialista/especialista.component';
+import { RegistrarDetalleClienteComponent } from './components/registrar-detalle-cliente/registrar-detalle-cliente.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { EspecialistaComponent } from './components/especialista/especialista.co
     AsignarEspecialistaClienteComponent,
     SidebarComponent,
     ClientesComponent,
-    EspecialistaComponent
+    EspecialistaComponent,
+    RegistrarDetalleClienteComponent
   ],
   imports: [
     BrowserModule,
