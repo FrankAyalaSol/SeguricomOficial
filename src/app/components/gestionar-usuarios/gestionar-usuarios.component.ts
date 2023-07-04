@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Usuario } from 'src/app/models/usuario.model';
+import { UsuariosService } from 'src/app/services/usuarios.service';
 
 @Component({
   selector: 'app-gestionar-usuarios',
@@ -10,16 +11,16 @@ export class GestionarUsuariosComponent implements OnInit {
 
   listUsuarios: Usuario[] = [];
 
-  constructor() { }
+  constructor(private usuariosService: UsuariosService) { }
 
   ngOnInit(): void {
   }
 
   obtenerUsuarios() {
-    this.usuariosService.obtenerUsuario().subscribe(
+    this.usuariosService.obtenerUsuarios().subscribe(
       (res) => {
         console.log(res);
-        this.listUsuarios = [res.nombre, res.correo_electronico, res.rol];
+        this.listUsuarios = Object.values(res);
       },
       (error) => {
         console.log(error);
