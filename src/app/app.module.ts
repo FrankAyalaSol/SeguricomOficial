@@ -31,6 +31,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { ClientesComponent } from './components/clientes/clientes.component';
 import { EspecialistaComponent } from './components/especialista/especialista.component';
 import { RegistrarDetalleClienteComponent } from './components/registrar-detalle-cliente/registrar-detalle-cliente.component';
+import { RegistrarDetalleFormComponent } from './components/registrar-detalle-form/registrar-detalle-form.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { RegistrarDetalleClienteComponent } from './components/registrar-detalle
     SidebarComponent,
     ClientesComponent,
     EspecialistaComponent,
-    RegistrarDetalleClienteComponent
+    RegistrarDetalleClienteComponent,
+    RegistrarDetalleFormComponent
   ],
   imports: [
     BrowserModule,

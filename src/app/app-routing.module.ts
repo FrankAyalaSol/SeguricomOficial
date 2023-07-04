@@ -22,6 +22,7 @@ import { VisualizarEspecialistaComponent } from './components/visualizar-especia
 import { AsignarEspecialistaComponent } from './components/asignar-especialista/asignar-especialista.component';
 import { AsignarEspecialistaClienteComponent } from './components/asignar-especialista-cliente/asignar-especialista-cliente.component';
 import { RegistrarDetalleClienteComponent } from './components/registrar-detalle-cliente/registrar-detalle-cliente.component';
+import { RegistrarDetalleFormComponent } from './components/registrar-detalle-form/registrar-detalle-form.component';
 
 const routes: Routes = [
   {
@@ -66,6 +67,15 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
+    path: 'registrar-detalle-cliente',
+    component:RegistrarDetalleClienteComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'registrar-detalle-form',
+    component:RegistrarDetalleFormComponent,
+  },
+  {
     path: 'Pagina_Administrador', //private
     component:PaginaAdministradorComponent,
     canActivate: [AuthGuard]
@@ -98,11 +108,6 @@ const routes: Routes = [
   {
     path: 'principal',
     component:PrincipalComponent
-  },
-  {
-    path: 'registrar-detalle-cliente',
-    component:RegistrarDetalleClienteComponent,
-    canActivate: [AuthGuard]
   },
   {
     path: '**',
