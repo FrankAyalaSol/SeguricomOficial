@@ -9,6 +9,7 @@ import { Observable } from 'rxjs';
 export class AsignateSpecialistServiceService {
   private URLID = 'http://localhost:3000/api/cliente/'
   private ID = 'http://localhost:3000/api/gerente/'
+  private IDESPECIALISTA = 'http://localhost:3000/api/especialista/'
 
   constructor(private http: HttpClient, private router: Router) { }
 
@@ -35,5 +36,8 @@ export class AsignateSpecialistServiceService {
     return this.http.put(this.ID + 'citasPendiente/estado/' + data._id, {
       headers: headers,
     });
+  }
+  GetDetailClient(id: any): Observable<any> {
+    return this.http.get(this.IDESPECIALISTA + "detalleCliente/" + id );
   }
 }

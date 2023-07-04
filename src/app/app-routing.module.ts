@@ -100,7 +100,7 @@ const routes: Routes = [
     component:PrincipalComponent
   },
   {
-    path: 'registrar-detalle-cliente',
+    path: 'registrar-detalle-cliente/:id',
     component:RegistrarDetalleClienteComponent,
     canActivate: [AuthGuard]
   },
